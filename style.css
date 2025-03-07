@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    background: #0a0a0a; /* Dark theme */
+    color: white; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('auto.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Overlay for Better Readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    z-index: 1;
+}
+
+/* Ensure text is above overlay */
+.hero h1,
+.hero p,
+.hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* Adjust Text Styling */
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    background: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+    background: #e65c00;
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background: #111;
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.service-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.service-list li {
+    margin: 10px 0;
+}
+
+/* Images */
+img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.4);
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background: #222;
+    border-radius: 10px;
+}
+
+.contact a {
+    color: #ff6600;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact a:hover {
+    color: #e65c00;
+}
+
+/* Input Fields */
+input, textarea {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #333;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
